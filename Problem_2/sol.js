@@ -1,7 +1,7 @@
 fib = function(n) {
     var ans = 0;
     sum = function(a) {
-        s = a.reduce(function(first, last) {
+        var s = a.reduce(function(first, last) {
             return first + last;
             });
         return s;
