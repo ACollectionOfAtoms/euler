@@ -14,7 +14,7 @@ int fib(int n) {
         return ans;
     }else{
         int last_two[] = {0, 1};
-        for (i; i < n; i++) {
+        for (i= 0; i < n; i++) {
             ans = sum_array(last_two, 2);
             last_two[0] = last_two[1];
             last_two[1] = ans;
@@ -26,17 +26,13 @@ int fib(int n) {
 int main() {
     int maximum = 4000000;
     int evenSum = 0;
-    int n = 2;
-    while (n < 5) {
+    int n = 1;
+    while (fib(n) < maximum) {
         n++;
-        int var = fib(10);
-        printf("this is a number %i\n", var);
-        printf("what the %i\n", fib(n));
-        printf("%i\n", n);
         if (fib(n) % 2 == 0) {
             evenSum += fib(n);
         }
     }
-    printf("%i", evenSum);
+    printf("%i\n", evenSum);
     return 0;
 }
