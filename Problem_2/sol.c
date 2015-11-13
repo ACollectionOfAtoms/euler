@@ -14,7 +14,7 @@ int fib(int n) {
         return ans;
     }else{
         int last_two[] = {0, 1};
-        for (i= 0; i < n; i++) {
+        for (i = 0; i < n; i++) {
             ans = sum_array(last_two, 2);
             last_two[0] = last_two[1];
             last_two[1] = ans;

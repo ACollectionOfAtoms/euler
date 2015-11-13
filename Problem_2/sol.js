@@ -18,3 +18,18 @@ fib = function(n) {
     }
     return ans;
 };
+
+main = function() {
+    maximum = 4000000;
+    evenSum = 0;
+    n = 1;
+    while (fib(n) < maximum) {
+        n += 1;
+        if (fib(n) % 2 === 0) {
+            evenSum += fib(n);
+        }
+    }
+    return evenSum;
+};
+
+console.log(main());
