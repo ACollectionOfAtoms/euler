@@ -1,10 +1,11 @@
 def sieve_of_eratosthenes(n):
-    number_list = range(2, n)
-    init_marks = [False]*(n - 2)
-    number_dictionary = dict(zip(number_list, init_marks))
-    p = 2
+    rejects = set()
+    nums = range(2, n)
     primes = []
-
-    for num in number_dictionary:
-        if num == p and number_dictionary[num] is False:
+    for num in nums:
+        if num in rejects:
+            pass
+        else:
             primes.append(num)
+            rejects.update(range(num, n + num, num))
+    return primes
